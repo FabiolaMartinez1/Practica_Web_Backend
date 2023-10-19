@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: sakila-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password        # Contraseña del usuario root
+      MYSQL_DATABASE: sakila                    # Nombre de la base de datos
+      MYSQL_USER: userdb                   # Tu nombre de usuario personalizado
+      MYSQL_PASSWORD: 123456           # Tu contraseña personalizada
+    volumes:
+      - ./sakila-schema.sql:/docker-entrypoint-initdb.d/1-sakila-schema.sql
+      - ./sakila-data.sql:/docker-entrypoint-initdb.d/2-sakila-data.sql
+    ports:
+      - "3306:3306"
