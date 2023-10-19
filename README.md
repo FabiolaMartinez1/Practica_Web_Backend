@@ -1,3 +1,10 @@
+# BDD Sakila
+```
+mysql --user=userdb --password
+
+Contraseña: 123456
+```
+
 # Instrucciones para crear un backend para la tabla "actor"
 
 Este proyecto consiste en la creación de un backend para la tabla "actor" utilizando Express.js para Node.js y PHP. Este backend proporcionará operaciones CRUD (Crear, Leer, Actualizar y Eliminar) para la tabla "actor". Puedes elegir el lenguaje de programación (Node.js con Express o PHP) que prefieras o realizar ambas implementaciones si lo deseas.

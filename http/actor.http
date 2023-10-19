@@ -1,0 +1,53 @@
+### Obtener todos los actores
+GET http://localhost:3000/actors
+Authorization: true
+
+###
+
+### Obtener un actor específico por ID
+GET http://localhost:3000/actors/205
+Authorization: true
+
+###
+
+###
+# Para obtener los primeros 10 actores
+GET http://localhost:3000/actors?limit=10&offset=0 
+Authorization: true
+
+###
+# Para obtener los siguientes 10 actores
+GET http://localhost:3000/actors?limit=10&offset=10 
+Authorization: true
+
+###
+
+### Crear un nuevo actor
+POST http://localhost:3000/actors
+Authorization: true
+Content-Type: application/json
+
+{
+    "first_name": "ActorC",
+    "last_name": "Nuevo"
+}
+
+###
+
+### Actualizar un actor por ID
+PUT http://localhost:3000/actors/205
+Authorization: true
+Content-Type: application/json
+
+{
+    "first_name": "ActorC",
+    "last_name": "ApellidoNuevo"
+}
+
+###
+
+### Eliminar un actor por ID
+DELETE http://localhost:3000/actors/210
+Authorization: true
+
+###

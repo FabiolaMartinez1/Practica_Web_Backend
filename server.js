@@ -1,12 +1,14 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const actorsRoutes = require('./routes/ActorsRoutes');
+const authorizationMiddleware = require('./middlewares/authorization');
 
 const app = express();
-const PORT = 3000;
+const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send('¡Hola Mundo :D!');
-});
-
-app.listen(PORT, () => {
-    console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
+app.use(bodyParser.json());
+// app.use('/actors', actorsRoutes);  // Esto conecta las rutas de actores con tu aplicación.
+app.use('/actors', authorizationMiddleware, actorsRoutes);
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });
