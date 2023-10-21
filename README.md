@@ -1,4 +1,13 @@
 # BDD Sakila
+
+**Ejecutar el contenedor**
+
+   Utiliza el siguiente comando para arrancar el contenedor de la base de datos:
+
+```bash
+docker-compose up -d
+```
+   
 ```
 mysql --user=userdb --password
 
